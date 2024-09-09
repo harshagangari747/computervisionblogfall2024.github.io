@@ -46,7 +46,7 @@ Prompt 5: Is there any house in the image? If yes, what is the color of the hous
 Gemini: Based on the provided image, there is no house visible. The image primarily depicts a natural landscape with trees and cows. There are no structures or buildings apparent in the background.
 Our Thoughts: There are houses in the background, though they are blurry, indicating that the model struggles to analyze objects that aren't clearly visible.
 
-Final Thoughts: For 
+Final Thoughts: Based on our analysis of the given image, Gemini clearly outperforms Copilot. This discrepancy may be attributed to the fact that the domain we are testing might not align with the primary focus for which these models were developed. Gemini, designed to handle a broader range of AI tasks, was able to address our questions efficiently due to its extensive training on diverse datasets. In contrast, Copilot, which is specifically developed to assist developers with coding tasks and is relatively new compared to Gemini, may not have been extensively trained on datasets relevant to image analysis, which could explain its less effective performance in this scenario.
 
 
 
