@@ -8,9 +8,10 @@ We have provided the above image to both google Gemini and Microsoft copilot and
 
 **CoPilot:**
 
-Prompt 1: What is this image about? Copilot: This image shows three cows in a peaceful pasture. Two cows are prominently in the foreground, while one is partially visible in the background. They are brown with white patches, likely a dairy breed, and are standing among birch trees with distinctive white bark. The scene suggests a rural or agricultural setting, highlighting livestock farming or the natural environment where these cows graze. Our Thoughts: The image contains only two cows, but the copilot mistakenly interpreted the thurl of one cow as another cow, since that part closely resembled the cow's face.
+Prompt 1: What is this image about? Copilot: This image shows three cows in a peaceful pasture. Two cows are prominently in the foreground, while one is partially visible in the background. They are brown with white patches, likely a dairy breed, and are standing among birch trees with distinctive white bark. The scene suggests a rural or agricultural setting, highlighting livestock farming or the natural environment where these cows graze. 
+Our Thoughts: The image contains only two cows, but the copilot mistakenly interpreted the thurl of one cow as another cow, since that part closely resembled the cow's face.
 
-Prompt 2: How many trees are there in this image? Copilot: In the image, there are three birch trees visible. They have distinctive white bark with black markings, adding to the serene rural setting. Our Thoughts: The model was able to clearly distinguish the trees from other objects in the image, demonstrating its ability in scenarios where the objects are clear and in the foreground.
+Prompt 2: How many trunks are visible near the cows? Copilot: There are three trunks visible near the cows in the image you provided. The scene looks quite peaceful with the cows grazing in a sunny, green pasture. Our Thoughts: The model was able to clearly distinguish the trees from other objects in the image, demonstrating its ability in scenarios where the objects are clear and in the foreground.
 
 Prompt 3: How many eyes are visible in this image? Copilot: In the image, there are four eyes visible. Each of the two cows in the foreground has both eyes visible, while the cow in the background does not have any visible eyes. Our Thoughts: The model might have assumed that both eyes of each cow were visible based on a prior expectation of symmetry, even though only one eye was visible on each cow.
 
@@ -33,8 +34,8 @@ Prompt 2: How many eyes are visible in this image?
 Gemini: Two eyes are visible in the image. You can see the eyes of one cow looking directly at the camera and one eye of the other cow looking off to the side.
 Our Thoughts:  Gemini was able to correctly answer this question, showing that it is gathering information from the image without making any inferences based on the data it was trained on.
 
-Prompt 3: How many trees are there in this image?
-Gemini: There are two trees visible in the image. They are both birch trees, and they are standing on either side of the two cows.
+Prompt 3: How many trunks are visible near the cows?
+Gemini: Two trunks are visible near the cows. They belong to the two birch trees standing on either side of them.
 Our Thoughts: The model answered this question incorrectly, possibly because it failed to recognize the division between the two trees. The image is a bit confusing, as it resembles a single trunk that then splits into two.
 
 Prompt 4: Is there any fence in the background?
@@ -42,8 +43,12 @@ Gemini: Yes, there appears to be a fence in the background of the image. It's pa
 Our Thoughts: The model successfully identified the fence in the background, demonstrating its ability to detect and analyze objects even when they are not clearly visible.
 
 Prompt 5: Is there any house in the image? If yes, what is the color of the house?
-Copilot: There is no house present in the image.
+Gemini: Based on the provided image, there is no house visible. The image primarily depicts a natural landscape with trees and cows. There are no structures or buildings apparent in the background.
 Our Thoughts: There are houses in the background, though they are blurry, indicating that the model struggles to analyze objects that aren't clearly visible.
+
+Final Thoughts: For 
+
+
 
 
 
