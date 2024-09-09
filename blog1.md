@@ -1,11 +1,11 @@
 # From Precision to Perplexity: Assessing AI's Image Interpretation Skills</br>
 
 ### <ins>Introduction:</ins></br>
-The purpose of this blog is to analyze the incorrect responses given by Microsoft Copilot and Google Gemini Large Language Models when prompted with questions about an image.
+The purpose of this blog is to analyze the responses given by Microsoft Copilot and Google Gemini Large Language Models when prompted with questions about an image.
 We chose the following image.</br>
 ![image](https://github.com/user-attachments/assets/a6c9e41c-f803-43e3-83ff-f3a6f5458ce7)
 </br>
-We have provided the above image to both google Gemini and Microsoft copilot and we asked few questions about the image. Though we got accurate answers, there were few incorrect answers given by both LLMs.</br>
+<!--We have provided the above image to both google Gemini and Microsoft copilot and we asked few questions about the image. Though we got accurate answers, there were few incorrect answers given by both LLMs.</br>-->
 ### <ins>CoPilot:</ins>
 </br></br>
 <b>Prompt 1:</b> What is this image about?</br> <b>Copilot:</b> This image shows three cows in a peaceful pasture. Two cows are prominently in the foreground, while one is partially visible in the background. They are brown with white patches, likely a dairy breed, and are standing among birch trees with distinctive white bark. The scene suggests a rural or agricultural setting, highlighting livestock farming or the natural environment where these cows graze. </br>
