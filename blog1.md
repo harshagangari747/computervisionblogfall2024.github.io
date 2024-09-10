@@ -13,7 +13,7 @@ We chose the following image.</br>
 
 <b>Prompt 2:</b> How many trunks are visible near the cows?</br> <b>Copilot:</b> There are three trunks visible near the cows in the image you provided. The scene looks quite peaceful with the cows grazing in a sunny, green pasture.</br> <b>Our Thoughts:</b> The model was able to clearly distinguish the trees from other objects in the image, demonstrating its ability in scenarios where the objects are clear and in the foreground.</br></br>
 
-<b>Prompt 3:</b> How many eyes are visible in this image?</br> <b>Copilot:</b> In the image, there are four eyes visible. Each of the two cows in the foreground has both eyes visible, while the cow in the background does not have any visible eyes.</br> <b>Our Thoughts:</b> The model might have assumed that both eyes of each cow were visible based on a prior expectation of symmetry, even though only one eye was visible on each cow.</br></br>
+<b>Prompt 3:</b> How many eyes are visible in this image?</br> <b>Copilot:</b> In the image, there are four eyes visible. Each of the two cows in the foreground has both eyes visible, while the cow in the background does not have any visible eyes.</br> <b>Our Thoughts:</b> The model might have assumed that both eyes of each cow were visible based on a prior knowledge that the cows have two eyes, even though only one eye was clearly visible on each cow.</br></br>
 
 <b>Prompt 4:</b> Is there any fence in the background?</br>
 <b>Copilot:</b> There is no fence visible in the background of the image.</br>
@@ -21,7 +21,7 @@ We chose the following image.</br>
 
 <b>Prompt 5:</b> Is there any house in the image? If yes, what is the color of the house?</br>
 <b>Copilot:</b> There is no house present in the image.</br>
-<b>Our Thoughts:</b> There are houses in the background, though they are blurry, indicating that the model struggles to analyze objects that aren't clearly visible.</br>
+<b>Our Thoughts:</b> There is house in the background, though they are blurry, indicating that the model can't determine the objects in the blurred background images to analyze objects that aren't clearly visible.</br>
 </br></br>
 ### <ins>Gemini:</ins>
 </br></br>
