@@ -24,6 +24,8 @@ The clue may vaguely describes about the object or position in the image. For ex
 
 ### Training data
 * For this project, training data is not necessary as we are opting to use predefined models like DALL-E, YOLO.
+* DALL-E: Generates images from relavant text prompts.
+* YOLO: Real Time Object Detection system.
 
 ### Evaluation plan
 * Testing the Model with giving the images where we know all the differences and evalauting how relevant are the clues generated is useful for finding differences.
