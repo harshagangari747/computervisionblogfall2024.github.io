@@ -1,3 +1,4 @@
+                                                                                ## Solving 'SPOTTING THE DIFFERENCES' using Computer Vision
 ### Project Idea: 
 Given two similar images, as input to the game 'Spot the differences', but with very small transformation of the objects in those images like difference in color, position or shape,
 the objective is to detect the differences in those two images and then generate clue to the player about the region where those differences lies.
