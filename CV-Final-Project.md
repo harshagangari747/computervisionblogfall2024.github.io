@@ -18,11 +18,11 @@ bottom left, bottom right)
 * Output is set of clues that help player to spot the differences
 
 ### Training data
-For this project, training data is not necessary as we are opting readily usable models like YOLO.
+* For this project, training data is not necessary as we are opting readily usable models like YOLO.
 
 ### Evaluation plan
-We can validate manually by following the clues to spot the differences
+* We can validate manually by following the clues to spot the differences
 
 ### Impact
-Spotting differences can be useful in analyzing change in the scenes which vary over the period of time.
-If developed into a full-fledged game, this exercise can aid kids to improve the visual perception skills.
+* Spotting differences can be useful in analyzing change in the scenes which vary over the period of time.
+* If developed into a full-fledged game, this exercise can aid kids to improve the visual perception skills.
