@@ -1,4 +1,4 @@
-<h2 align="center"> <b></b>Solving 'SPOTTING THE DIFFERENCES' using Computer Vision </h2></p>
+<h2 align="center"> <b></b>Solving 'SPOTTING THE DIFFERENCES' puzzle using Computer Vision </h2></p>
 
 ### Project Idea: 
 Given two similar images, as input to the game 'Spot the differences', but with very small transformation of the objects in those images like difference in color, position or shape,
