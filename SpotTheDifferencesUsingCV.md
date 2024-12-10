@@ -254,6 +254,18 @@ potted plant, sofa, tv/monitor."
  </p>
 </div>
 
+<div>
+
+<p>From all of the above Image-Generating Tools DALL-E have outperformed all other tools by generating the images that are considerable accurate for the prompts given</p>
+<b>Prompt:</b>
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games
+such that the image should contain only objects like a person, bird, cat, cow, dog, horse,
+sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table,
+potted plant, sofa, and TV/monitor."</pre>
+<p>Specifically, the above prompt is used because the things in the above prompt are only things that are detected by the object detection model YOLO.</p>
+
+</div>
+
 
 <!-- ===================================================================Task 2 Begin =================================================================== -->
 <h2>Task 2: Finding the difference Image</h2>
