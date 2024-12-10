@@ -85,7 +85,7 @@ We logically divide image to give 'positional clue' about the object for the pla
 
 
 <b>Prompt 2</b>
-<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor."</pre>
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor.Generate a simple pair may not need to be complicated one"</pre>
 <div >
   <p><p>Resulting image</p></p>
   <div align='center'>
