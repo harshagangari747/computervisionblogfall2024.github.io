@@ -455,9 +455,8 @@ potted plant, sofa, tv/monitor."
 <p><b>3.</b>https://copilot.microsoft.com/ for Copilot</p>
 <p><b>4.</b>https://deepai.org/machine-learning-model/text2img for DeepAI</p>
 <p><b>5.</b>https://www.canva.com/ai-image-generator/ for AI Image Generator by Canvo</p>
-<p><b>6.</b>link for YOLOv8m</p>
-<p><b>7.</b>https://github.com/ultralytics/ultralytics?tab=readme-ov-file for YOLO11n</p>
-<p><b>8.</b>https://udell.weebly.com/uploads/1/6/8/6/16860542/spot-the-difference-before-and-after_orig.jpg Real World Image taken from web</p>
+<p><b>6.</b>https://github.com/ultralytics/ultralytics?tab=readme-ov-file for YOLO MODELs</p>
+<p><b>7.</b>https://udell.weebly.com/uploads/1/6/8/6/16860542/spot-the-difference-before-and-after_orig.jpg Real World Image taken from web</p>
 
 </div>
 
