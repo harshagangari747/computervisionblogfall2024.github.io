@@ -74,8 +74,7 @@ We logically divide image to give 'positional clue' about the object for the pla
 
 <h3>1. DALL-E: Image Generation tool based on the Prompt given, by OpenAI</h3>
 <b>Prompt 1</b>
-<pre>"Generate image pair that can be used in spotting differences between two image games such that the objects in image should contain 
-Person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, tv/monitor."</pre>
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor."</pre>
 <div >
   <p><p>Resulting image</p></p>
   <div align='center'>
@@ -86,8 +85,7 @@ Person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, m
 
 
 <b>Prompt 2</b>
-<pre>"Generate image pair that can be used in spotting differences between two image games such that the objects in image should contain 
-Person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, tv/monitor. enerate simple images not much complicated. "</pre>
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor."</pre>
 <div >
   <p><p>Resulting image</p></p>
   <div align='center'>
@@ -128,8 +126,7 @@ Two image should be similar and copy of each other. But make changes to few obje
 
 <h3>2. Copilot: Image Generation Tool based on prompt given, by Microsoft.</h3>
 <b>Prompt 1</b>
-<pre>"Generate image pair that can be used in spotting differences between two image games such that the objects in image should contain 
-Person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, tv/monitor."
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -164,9 +161,7 @@ Person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, m
 
 <h3>3. Image generation tool based on prompts, by Google Gemini.</h3>
 <b>Prompt 1</b>
-<pre>"Can you generate two image that can be used for "spotting differences between the images " the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep. 
-aeroplane, bicycle, boat, bus, car, motorbike, train. 
-bottle, chair, dining table, potted plant, sofa, tv/monitor."
+<pre>"Can you generate two image that can be used for "spotting differences between the images " the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train,bottle, chair, dining table, potted plant, sofa, tv/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
