@@ -385,10 +385,10 @@ potted plant, sofa, and TV/monitor."</pre>
   </div>
 </div>
     <b>Analysis</b>
-    <p>Analysing the clues, we could infer that the expected objects are detected by the model at mentioned places.</p>
+    <p>Analyzing the clues, we could infer that the expected objects are detected by the model at mentioned places.</p>
     <br/>
-    <p>Additional clues include about the bottle at center.Again, this clue is correct as the green bottle in the center of the grid and on the table is differing terms of height</p>
-  <p>What is surprising is that the dog in bottom right is treated as a teddy bear by the model. As explained earlier, this could because of the similarities of teddy bear and dog and the dog body is not fully visible hence directing model to predict dog as teddy bear</p>
+    <p>Additional clues include the bottle at the center. Again, this clue is correct, as the green bottle in the center of the grid and on the table is differing in terms of height.</p>
+  <p>What is surprising is that the dog in the bottom right is treated as a teddy bear by the model. As explained earlier, this could be because of the similarities of the teddy bear and dog, and the dog's body is not fully visible, hence directing the model to predict the dog as a teddy bear.</p>
   </div>
 </div>
 
