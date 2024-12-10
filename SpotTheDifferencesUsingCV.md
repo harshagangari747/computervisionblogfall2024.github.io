@@ -382,7 +382,7 @@ bottle, chair, dining table, potted plant, sofa, tv/monitor."
 <div align='center'>
   <img width=600' src='https://github.com/user-attachments/assets/ae85a9a8-b24b-494d-8f85-1161aa0f6606'/>
 </div>
-<p>The differece image generated is below</p>
+<p>The difference image generated is below</p>
 <div align='center'>
   <img width='600' src='https://github.com/user-attachments/assets/eaf3e0a1-650d-48f8-beea-5aa3db49ac9e'/>
 </div>
