@@ -414,10 +414,10 @@ bottle, chair, dining table, potted plant, sofa, tv/monitor."
 <div align='center'>
 <img width='600' src='https://github.com/user-attachments/assets/6ff70b60-57e9-41ac-9a7b-7ba4c5a8b1f2'/>
 <br/>
-<img src='https://github.com/user-attachments/assets/3579dbc7-14f5-4d8e-b51c-9f58a24ccd03'/>
+<img width='600' src='https://github.com/user-attachments/assets/3579dbc7-14f5-4d8e-b51c-9f58a24ccd03'/>
 <br/>
 
-  <img src='https://github.com/user-attachments/assets/34acd6ec-c3ad-4afc-865f-7c634512b289'/>
+  <img width='600' src='https://github.com/user-attachments/assets/34acd6ec-c3ad-4afc-865f-7c634512b289'/>
 </div>
 
 
