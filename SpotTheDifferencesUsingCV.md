@@ -53,7 +53,7 @@ The image is logically divided into nine(9) parts to give the positional clue so
 <p><b>Figure 1: Architecture Diagram</b></p></div>
 
 <h3>Object detection model selection</h3>
-<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many versions of YOLO models. We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models.</p>
+<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many versions of YOLO models. We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object versions of these detection model.</p>
 
 <h3>Image division</h3>
 We logically divide image to give 'positional clue' about the object for the player to look for. The regions in the image can be comprehended as below mentioned area.
