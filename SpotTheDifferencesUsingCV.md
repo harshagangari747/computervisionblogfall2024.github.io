@@ -365,9 +365,9 @@ potted plant, sofa, and TV/monitor."</pre>
     <div align='center'> <img width="1512" alt="yolo11-cactus" src="https://github.com/user-attachments/assets/6be76797-e53c-4705-ba40-5f4730272915">
  </div>
     <b>Analysis</b>
-    <p>This time, on yolo11n, the model detected many objects. If we look at the clues, the model detected bicycle, fire hydrant correctly but leaving out the hot-air balloon and traffic light. What interesting in this experiment is that the model is treating the 'long head' of the cactus as the surfboard. We are convinced that the shape of surfboard can be a possible for the given shape of the cactus. Other interesting detection is that 'banana' at the center of the image. We feel this detection was a result of the model mispredicting the stem of the larger cactus as banana. Again, we were convinced by looking at the shape of the stem as it has slight curve resembling the raw green banana</p>
+    <p>This time, on yolo11n, the model detected many objects. If we look at the clues, the model detected bicycle and fire hydrant correctly but left out the hot-air balloon and traffic light. What is interesting in this experiment is that the model is treating the 'long head' of the cactus as the surfboard. We are convinced that the shape of the surfboard can be a possible match for the given shape of the cactus. Other interesting detection is that 'banana' at the center of the image. We feel this detection was a result of the model mispredicting the stem of the larger cactus as banana. Again, we were convinced by looking at the shape of the stem, as it has a slight curve resembling the raw green banana.</p>
     <br/>
-    <p>There are many mispredictions made by the model. The model struggled to recognize the 'not so well' defined outlines of the objects. All other mispredictions are due to shift in the scenes from one image to another</p>
+    <p>There are many mispredictions made by the model. The model struggled to recognize the 'not so well' defined outlines of the objects. All other mispredictions are due to shifts in the scenes from one image to another.</p>
   </div>
 </div>
 
