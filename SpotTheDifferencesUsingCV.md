@@ -426,7 +426,7 @@ potted plant, sofa, and TV/monitor."</pre>
   <img width="600" alt="yolo8m-people" src="https://github.com/user-attachments/assets/41f1c8dd-22cd-46a1-9989-40c9a878387c">
 </div>
 <p><b>Analysis</b></p>
-<p>The above image has many clues in which most of them are correct detections. For example, the most easily detectable difference is the traffic light, dog, suitcases and persons, traffic cone. It even detected the cars in back. This increase in detection of objects is because the images are exactly copy of each other in terms of image dimensions and static indifferent objects. Hence the difference mask is generated accurately, helping to capture the most of the contours at correct places. Also the objects in the image are outlined sharply.</p>
+<p>The above image has many clues, most of which are correct detections. For example, the most easily detectable differences are the traffic light, dog, suitcases, persons, and the traffic cone. It even detected the cars in back. This increase in detection of objects is because the images are exactly copies of each other in terms of image dimensions and static indifferent objects. Hence the difference mask is generated accurately, helping to capture the most of the contours at correct places. Also, the objects in the image are outlined sharply.</p>
 
 
 <h2>Conclusion</h2>
@@ -462,13 +462,14 @@ potted plant, sofa, and TV/monitor."</pre>
   
 <b>Reference :</b>
 
-<p><b>1.</b>https://chatgpt.com/ for DALL-E</p>
-<p><b>2.</b>https://gemini.google.com/app for Imagen 3</p>
-<p><b>3.</b>https://copilot.microsoft.com/ for Copilot</p>
-<p><b>4.</b>https://deepai.org/machine-learning-model/text2img for DeepAI</p>
-<p><b>5.</b>https://www.canva.com/ai-image-generator/ for AI Image Generator by Canvo</p>
-<p><b>6.</b>https://github.com/ultralytics/ultralytics?tab=readme-ov-file for YOLO MODELs</p>
-<p><b>7.</b>https://udell.weebly.com/uploads/1/6/8/6/16860542/spot-the-difference-before-and-after_orig.jpg Real World Image taken from web</p>
+<p><b>1. </b>https://chatgpt.com/ for DALL-E</p>
+<p><b>2. </b>https://gemini.google.com/app for Imagen 3</p>
+<p><b>3. </b>https://copilot.microsoft.com/ for Copilot</p>
+<p><b>4. </b>https://deepai.org/machine-learning-model/text2img for DeepAI</p>
+<p><b>5. </b>https://www.canva.com/ai-image-generator/ for AI Image Generator by Canvo</p>
+<p><b>6. </b>https://github.com/ultralytics/ultralytics?tab=readme-ov-file for YOLO MODELs</p>
+<p><b>7. </b>https://udell.weebly.com/uploads/1/6/8/6/16860542/spot-the-difference-before-and- 
+             after_orig.jpg Real World Image taken from web</p>
 
 </div>
 
