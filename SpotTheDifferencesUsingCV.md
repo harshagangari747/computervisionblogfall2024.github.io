@@ -323,11 +323,11 @@ potted plant, sofa, and TV/monitor."</pre>
     <div><img width="1512" alt="yolo8m-dogman" src="https://github.com/user-attachments/assets/643bbea6-b0a3-4cd9-9ae3-039e2b172036"></div>
 </div>
     <b>Analysis</b>
-    <p>After taking a closer look at the clues, the model detected the dog and brown flower pot at the bottom right and the flower pot on the top left correctly</p>
+    <p>After taking a closer look at the clues, the model detected the dog and brown flowerpot at the bottom right and the flowerpot on the top left correctly.</p>
     <br/>
-    <p>Additional clues include about the bottle at center. This clue is correct as the green bottle in the center of the grid and on the table is differing terms of height</p>
-  <p>If we closely look at clues, one of the clue is about the 'wine glass' that was holding by the man in the image. It is surprising that the model was able to detect the objects whose outline was not sharp and pixellated. The clues about the dining table, umbrella, person are because of pixel shifts ( outlines detected in the difference mask image)</p>
-  <p>It is some what surprising that the flower vase on the top left is completely missed out by the model</p>
+    <p>Additional clues include about the bottle at center. This clue is correct as the green bottle in the center of the grid and on the table is differing terms of height.</p>
+  <p>If we closely look at clues, one of the clue is about the 'wine glass' that was holding by the man in the image. It is surprising that the model was able to detect the objects whose outline was not sharp and pixellated. The clues about the dining table, umbrella, person are because of pixel shifts (outlines detected in the difference mask image)</p>
+  <p>It is somewhat surprising that the flower vase on the top left is completely missed out by the model.</p>
   </div>
 </div>
 
