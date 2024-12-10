@@ -405,6 +405,15 @@ bottle, chair, dining table, potted plant, sofa, tv/monitor."
   To improve the gaming experience, we would like to create this web application as a full fledge game. Enhancements can be made by updating the SOTA models in both generating images as well as in object detections.
 </p>
 
+<h2>DALL-E generated 'similar' images</h2>
+<div align='center'>
+<img width='600' src='https://github.com/user-attachments/assets/6ff70b60-57e9-41ac-9a7b-7ba4c5a8b1f2'/>
+<br/>
+<img src='https://github.com/user-attachments/assets/3579dbc7-14f5-4d8e-b51c-9f58a24ccd03'/>
+
+  
+</div>
+
 
 
 
