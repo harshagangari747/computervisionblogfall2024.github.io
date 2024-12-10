@@ -3,7 +3,7 @@
 
 <h3>Introduction</h3>
 <p>Spotting the differences in two similar images is a fun game to solve. But sometimes, this game can become more difficult and tricky to solve as an adult. We got an idea to solve this game using computer vision techniques and advancements that are made in the recent years. This game is all about spotting the objects which are modified in some or the other way. For example: change in color, missing object or misplaced object from one image etc. This lead us to chose a object detection model called <b>YOLO</b> which was released in the year 2020.</p>
-<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image and clue generation is made using computer vision models; YOLO and DALL-E</p>
+<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image and clue generation is made using computer vision models; YOLO and AI Image Generation Tools</p>
 
 <h3>Objective</h3>
 <p>Given a pair of two similar images, the objective is to generate clues to guide player to spot the differences in both the images. The clues could be about the objects itself or position of the objects</p>
@@ -14,7 +14,7 @@
 <ol>
   <li><b>Image Generation using AI models.</b>
     <ul>
-    <li>We need to generate a pair of images that have some differences between them.This task is done using Ai-image generators such as Dall-E (by Open AI), Imagen 3(by Google), Copilot (by Microsoft), 	Text2img (by DeepAI), AI Image Generator (by Canva)</li>
+    <li>We need to generate a pair of images that have some differences between them.This task is done using Ai-image generators such as Dall-E (by Open AI), Imagen 3(by Google), Copilot (by Microsoft), 	AI Image Generator(also text2img by DeepAI), AI Image Generator (by Canva)</li>
   </ul>
   </li>
   
@@ -53,8 +53,7 @@ The image is divided into nine(9) parts to be more detailed while giving clue. <
 <p><b>Figure 1: Architecture Diagram</b></p></div>
 
 <h3>Object detection model selection</h3>
-<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many YOLO models.
-We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models</p>
+<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many versions of YOLO models. We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models</p>
 
 <h3>Image division</h3>
 We logically divide image to give 'positional clue' about the object for the player to look for. The regions in the image can be comprehended as below mentioned area
@@ -69,7 +68,7 @@ We logically divide image to give 'positional clue' about the object for the pla
 <!-- ===================================================================Task 1 Begin =================================================================== -->
 <h2>Task1: Collecting the Images</h2>
 
-<p>In our first task, we queried many of computer vision models that are available out there on internet. We queried DALL-E, Google Gemini, Microsoft's Copilot. We realized that since we are using the YOLO model, we thought of keeping the objects that are only detectable by the this model. So for the prompts that we gave, we tried to include a list of objets that we are particularly interest, which were also detectable by YOLO </p>
+<p>In our first task, we queried many of computer vision models for AI Image Generation that are available out there on internet. We queried tools like DALL-E, Imagen 3 by Google Gemini, Microsoft's Copilot. We realized that since we are using the YOLO model, we thought of keeping the objects that are only detectable by the this model. So for the prompts that we gave, we tried to include a list of objets that we are particularly interest, which were also detectable by YOLO </p>
 
 
 <h3>1. DALL-E: Image Generation tool based on the Prompt given, by OpenAI</h3>
@@ -83,7 +82,7 @@ potted plant, sofa, and TV/monitor."</pre>
   <div align='center'>
     <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/d2b89383-1d70-4d1b-a355-abfa16b22a5e">
   </div>
-  <p>The above is generated when the prompt is given to DALL-E the image just left-shift of image and that does not have much noticeable difference in them (just a bottle on the table) </p>
+  <p><b>Image-2:</b>The above image is generated when the prompt is given to DALL-E the image on right is just left-shift of image on left and that does not have much noticeable difference in them (just a bottle on the table) </p>
 </div>
 
 
@@ -98,7 +97,7 @@ Generate a simple pair may not need to be complicated one"</pre>
   <div align='center'>
     <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/ea4f7524-be89-4a70-af81-fc6f329da4e1">
   </div>
-  <p>The above generated by the DALL-E but less complex with significant differences in them (like bottle on the table, dogs at the Bottom-Left and Bottom-Right and flowerpots at top-Left and Bottom-Right). Although this image is also a Left-Shift image of first one comparatively is better than Image-1.</p>
+  <p><b>Image-2:</b> The above generated by the DALL-E but less complex with significant differences in them (like bottle on the table, dogs at the Bottom-Left and Bottom-Right and flowerpots at top-Left and Bottom-Right). Although this image is also a Left-Shift image of image on rightside but comparatively better than Image-1.</p>
 </div>
 
 <b>Prompt 3</b>
@@ -109,7 +108,7 @@ I need perfectly aligned and specific differences in the images. "</pre>
   <div align='center'>
     <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/5f2a77fa-cfe6-4612-839f-1c1537ea67df">
   </div>
-  <p>The above image is generated by DALL-E which is having difference between two scenes and a very less shift compared to earlier scenes.</p>
+  <p>The above image is generated by DALL-E which is having soe differences in between two scenes and a very less shiftrd image pair compared to earlier scenes.</p>
 </div>
 
 <p>At this point we thought to generate images by giving the real image reference along with the yolo detectable objects to check if we could make DALL-E to generate accurate images</p>
@@ -131,7 +130,9 @@ any pixel shift of the images.There should exactly align most of the static obje
   <div align='center'>
     <img width= '600' height='300' src = 'https://github.com/user-attachments/assets/c75c91d9-cc21-42ee-89e7-9df948413b7a'/>
   </div>
-  <p>Image is generated by DALL-E where we have given more specific description to generate image containing of specific objects in image. This image also has slight shift from one another (almost neglectable). We have also generated lot more images with different prompts, but image that are most accurately generated from the prompts are discussed here.</p>
+  <p>Image is generated by DALL-E where we have given more specific description to generate image containing of specific objects in image. This image also has slight shift from one another (almost neglectable).</p>
+  <p>We have also generated lot more images with different prompts, but image that are most accurately generated from the prompts are discussed here.</p>
+
 </div>
 
 
@@ -147,7 +148,7 @@ sofa, and TV/monitor."
   <div align='center'>
     <img width="600" height='500' alt="image" src="https://github.com/user-attachments/assets/edc88edd-efbd-4be9-8a26-17b54e01bb10">
   </div>
-  <p>The above image is generated by DALL-E which is having difference between two scenes and a very less shift compared to earlier scenes.</p>
+  <p>This image is generated by copilot where the image left and right part of same image but the same scene which have difference. </p>
 </div>
 
 <b>Prompt 2</b>
@@ -159,7 +160,7 @@ should be of same scene with some differences in them."
   <div align='center'>
     <img width="600" height='500' alt="image" src="https://github.com/user-attachments/assets/02503688-2f54-44b8-b3b9-6068cb05b158">
   </div>
-  <p>The above is generated by copilot where the image has same differences as butterflies, but the image is not accurate of same scene it is left-shift of first image.</p>
+  <p>The above is generated by copilot where the image has some differences such as butterflies, but the image is not accurate of same scene it is left-shift of leftside image.</p>
 </div>
 
 <b>Prompt 3</b>
@@ -171,7 +172,7 @@ left/right and having some differences in the pair of images."
   <div align='center'>
     <img width="600" height='500' alt="image" src="https://github.com/user-attachments/assets/d9636257-ad80-4475-947e-e028ba43eddd">
   </div>
-  <p>The best image in the set of images generated by the copilot for spotting difference puzzles which is having a slight shift of first image and having some differences between them, but the image is not a sharp-edged image or unclear image.
+  <p>The best image in the set of images generated by the copilot for spotting difference puzzles which is having a slight shift in image pair and having some differences between them, but the image is not a sharp-edged image or unclear image.
 </p>
 </div>
 
@@ -198,7 +199,7 @@ having some differences in the pair of images."
   <div align='center'>
     <img width="600" height='500' alt="image" src="https://github.com/user-attachments/assets/fb64d08a-cbe1-4cda-b3f7-e729a38175c3">
   </div>
-  <p>It just scrapped an image from web and made a little shift of first image with having no differences between them. It just changed the filter of the first image.</p>
+  <p>It looks like the image is just scrapped from web and made a little shift in image pair with having no differences between them. It just changed the filter of the first image looks like rightside image is brighter than left.</p>
 </div>
 
 <h3>4. text2img: AI image generator based on prompts, by DeepAI</h3>
