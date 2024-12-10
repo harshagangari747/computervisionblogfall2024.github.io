@@ -74,8 +74,8 @@ We logically divide image to give 'positional clue' about the object for the pla
 
 <h3>1. DALL-E: Image Generation tool based on the Prompt given, by OpenAI</h3>
 <b>Prompt 1</b>
-<pre>"Generate an image pair that can be used in "spotting differences between two images" 
-games such that the image should contain only objects like a person, bird, cat, cow, dog, horse,
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games
+such that the image should contain only objects like a person, bird, cat, cow, dog, horse,
 sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table,
 potted plant, sofa, and TV/monitor."</pre>
 <div >
@@ -88,7 +88,11 @@ potted plant, sofa, and TV/monitor."</pre>
 
 
 <b>Prompt 2</b>
-<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor.Generate a simple pair may not need to be complicated one"</pre>
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games 
+such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep,
+aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant,
+sofa, and TV/monitor.
+Generate a simple pair may not need to be complicated one"</pre>
 <div >
   <p><p>Resulting image</p></p>
   <div align='center'>
@@ -98,7 +102,8 @@ potted plant, sofa, and TV/monitor."</pre>
 </div>
 
 <b>Prompt 3</b>
-<pre>"'Continuation of the chat...' -The above image is also a left shift of the first image I need perfectly aligned and specific differences in the images. "</pre>
+<pre>"'Continuation of the chat...' -The above image is also a left shift of the first image 
+I need perfectly aligned and specific differences in the images. "</pre>
 <div >
   <p><p>Resulting image</p></p>
   <div align='center'>
@@ -129,7 +134,10 @@ Two image should be similar and copy of each other. But make changes to few obje
 
 <h3>2. Copilot: Image Generation Tool based on prompt given, by Microsoft.</h3>
 <b>Prompt 1</b>
-<pre>"Generate an image pair that can be used in "spotting differences between two images" games such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, and TV/monitor."
+<pre>"Generate an image pair that can be used in "spotting differences between two images" games
+such that the image should contain only objects like a person, bird, cat, cow, dog, horse, sheep,
+aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, 
+sofa, and TV/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -151,7 +159,8 @@ Two image should be similar and copy of each other. But make changes to few obje
 </div>
 
 <b>Prompt 3</b>
-<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards left/right and having some differences in the pair of images."
+<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards left/right and 
+having some differences in the pair of images."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -164,7 +173,9 @@ Two image should be similar and copy of each other. But make changes to few obje
 
 <h3>3. Image generation tool based on prompts, by Google Gemini.</h3>
 <b>Prompt 1</b>
-<pre>"Can you generate two image that can be used for "spotting differences between the images " the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train,bottle, chair, dining table, potted plant, sofa, tv/monitor."
+<pre>"Can you generate two image that can be used for "spotting differences between the images " puzzles
+the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep, aeroplane,
+bicycle, boat, bus, car, motorbike, train,bottle, chair, dining table, potted plant, sofa, tv/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -175,7 +186,8 @@ Two image should be similar and copy of each other. But make changes to few obje
 </div>
 
 <b>Prompt 2</b>
-<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards left/right and having some differences in the pair of images."
+<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards left/right and
+having some differences in the pair of images."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -187,7 +199,10 @@ Two image should be similar and copy of each other. But make changes to few obje
 
 <h3>4. text2img: AI image generator based on prompts, by DeepAI</h3>
 <b>Prompt 1</b>
-<pre>"Generate two image that can be used for "spotting differences between the images " the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, tv/monitor."
+<pre>"Generate two image that can be used for "spotting differences between the images " 
+the image should only generate the objects in it are person, bird, cat, cow, dog, horse,
+sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, 
+potted plant, sofa, tv/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -216,7 +231,10 @@ Two image should be similar and copy of each other. But make changes to few obje
 
 <h3>5. AI Image Generator: The image generation based on prompts, by Canva</h3>
 <b>Prompt 1</b>
-<pre>"Generate two image that can be used for "spotting differences between the images " the image should only generate the objects in it are person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted plant, sofa, tv/monitor."
+<pre>"Generate two image that can be used for "spotting differences between the images " 
+the image should only generate the objects in it are person, bird, cat, cow, dog, horse,
+sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, 
+potted plant, sofa, tv/monitor."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
