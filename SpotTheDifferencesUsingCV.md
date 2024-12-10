@@ -9,32 +9,28 @@
 <p>Given a pair of two similar images, the objective is to generate clues to guide player to spot the differences in both the images. The clues could be about the objects itself or position of the objects</p>
 
 <h3>Approach</h3>
-<p>Our approach includes few steps.</p>
+<p>Our approach includes three steps.</p>
+
 <ol>
-  <li>
-<h5>Collect images from different models / LLM's available on the internet</h5>
-  <ul>
-    <li>The first task is to generate a pair of images from the computer vision models available on the internet</li>
-    <li>We considered DALL-E, Google Gemini, Microsoft's CoPilot</li>
-  </ul>
-    </li>
-<li>
-<h5>Input the images to the model for spotting the differences</h5>
-<ul>
-  <li>The second task is to feed the input to the next stage of the pipeline. Shortly, the pipeline is like </li>
-  <ul>
-      <li>First, using <i><b>'opencv'</b></i> python package, find the pixel differences in both the images</li>
-      <li>Second, get the contour regions in the difference image. Get the part of the image1 and image2 as 'region of interest' that corresponds to the contours</li>
-  </ul>
+  <li><b>Image Generation using AI models.</b>
+    <ul>
+    <li>We need to generate a pair of images that have some differences between them.This task is done using Ai-image generators such as Dall-E (by Open AI), Imagen 3(by Google), Copilot (by Microsoft), 	Text2img (by DeepAI), AI Image Generator (by Canva)</li>
   </ul>
   </li>
-  <li>
-<h5> Find the clues using object detection</h5>
-  <ul>
-    <li>Third, find the object in both the subpart of the images</li>
-      <li>Fourth, from the obtained objects that were detected in both the imagess, generate clues</li>
+  
+  <li><b> Spotting differences in the two images</b>
+    <ul>
+    <li>We have subtracted the image from one another we generated the mask image that implies the subtraction of pixel values using OpenCV python package.</li>
   </ul>
-    </li>
+  </li>
+  
+  <li><b>Generating the clues by identifying the objects that are difference mage.</b>
+    <ul><li>
+      After finding the pixel differences we get the contour regions as region of interest (ROI) in the difference mask image and then this region is given to the computer vision model YOLO to detect the object in them and found the relevant position of ROI in the image. 
+      <li>Thus, we generated the clues from the objects that were detected.
+The image is divided into nine(9) parts to be more detailed while giving clue. </li>
+    </li></ul>
+  </li>
 </ol>
 
 
@@ -56,6 +52,9 @@
 <br/>
 <p><b>Figure 1: Architecture Diagram</b></p></div>
 
+<h3>Object detection model selection</h3>
+<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many YOLO models.
+We thought of trying to run our experiments on YOLOv8 model as it is stable in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models</p>
 
 <p>Now we shall dive into the above three steps in detail</p>
 
@@ -64,65 +63,91 @@
 
 <p>In our first task, we queried many of computer vision models that are available out there on internet. We queried DALL-E, Google Gemini, Microsoft's Copilot. We realized that since we are using the YOLO model, we thought of keeping the objects that are only detectable by the this model. So for the prompts that we gave, we tried to include a list of objets that we are particularly interest, which were also detectable by YOLO </p>
 
-
-<p>We need to give a reference image to DALL-E to make it understand that we are seeking two similar pictures with minor differences in it. Else DALL-E struggles to understand the context and gives images which are essentially different. We prompted DALL-E with the below detailed description of the objects to include init along with a reference image</p>
-
-
-<p>Here is a detailed textual description of the image prompted to DALL-E</p>
-<pre>Create an image of a scenery/landscape by taking the reference of above image. 
-Use only objects from this list 0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'.
-
-Two image should be similar and copy of each other. But make changes to few objects for example, change the position of an object, change color of an object, delete an object, add a new object from the list. When I overlap the images, there should not be any pixel shift of the images. There should exactly align most of the static objects when overlapped. </pre>
-
-<p>Here is the reference image that we gave along with the prompt to DALL-E </p>
-<div align='center'><img width='50%' src = 'https://github.com/user-attachments/assets/7c97e6ff-4879-458f-b1a4-6cc494593156'/></div>
-
-<p>And here is the image generated by the DALL-E</p>
-<div align='center'><img width= '50%' src = 'https://github.com/user-attachments/assets/c75c91d9-cc21-42ee-89e7-9df948413b7a'/></div>
-
-<p>The difference of images is key here to determine the contours so that we can extract the part of images where the objects that differ in both image can potentially lie.</p> <p>Here the differece image of the above DALL-E generated image is</p>
-
-<h4>Issues:</h4>
-<p>Here, the image generated by DALL-E is exceptionally similar when seen, but when we tried to overlap the images on each other, there is significant pixel shift of the same object in both the images. For example, the cactus in both the images are at same height and same size, however, upon super positioned one image on another, the cactuses are at a different position than other.</p>
-
-<div align='center' height='50%'><img height=430px width=350px src='https://github.com/user-attachments/assets/07879f06-d635-415a-a66f-1fa87ed3e571'/></div>
-
-<p>When we used this image and fed into the model we got the output clues as</p>
-
-<div align='center' height='60%' width='50%'><img width='1000px' src='https://github.com/user-attachments/assets/0ebc8f44-5448-4c07-b6f0-d8287b2b60af'/></div>
-<h4>Analysis</h4>
-As we can see that, model has generated clues. But if we take a look at few clues, we understand that those objects infered in the clues have never appeared in the input image. We believe this has happend because of in accurate generation of 'difference image'. This inaccuracy is caused due to scene shift in both images generated by DALL-E. We tried to crop the image to compensate the scene shift, but to align the outline of static/indifferent objects to get 0 in difference image, we had to stretch or shrink one of the images. If we do so, few object's outline misalign if not other objects will. This lead to the difference images such as the above one.
-
-If we manually verify the differences, it is evident that fire hydrant, cycle in the bottom right are differences in both the image which the model found. There are hot balloon,traffic lights and light pole different in images, but model didn't figure out these differences. The model thought that the cactus 'long head' was a surfboard, as it resembles it in the shape of surfboard. 
-<h2> Task 2: Spot the differences by inputing the images to the model</h2>
-<p>Let us look at another example</p>
-<h4>Prompt</h4>
-<pre>ds</pre>
-
-<p> The image generated by DALL-E is </p>
-<div align='center' height='50%'><img width='50%' src='https://github.com/user-attachments/assets/40d4a648-def7-4f20-b78c-3f6d0a6bc91e'/></div>
-
-<p>The clues generated by the program are</p>
-<div align='center'><img width="1511"  src="https://github.com/user-attachments/assets/279748fb-3e8a-4e85-9243-e243c1e6e1e6"></div>
-
-<p>The difference generated is</p>
-<div align='center'><img height=350px' width='300px' src="https://github.com/user-attachments/assets/cbcc23c9-95e1-473b-a34e-12c7bddc5c4c"/></div>
-
-<h4>Analysis</h4>
-We can see there are many clues generated by the model. The bottle in the center (green), dog behind, flowerpot behind the dog, brown flower pot in the bottom right in image2 are different evidently different in the image which the model detected. The model detected the dog as teddy bear.
-
 <!-- ===================================================================Task 2 Begin =================================================================== -->
 <h2>Task 2: Finding the difference Image</h2>
-<p>Difference image is key for us as we draw the boundaries/contours of the parts of both the images to get the sub region in the image which we feed to the YOLO model for object detection. We used python's <b>opencv-python</b> package to find the difference mask as well as the contours in the images. We used the `absdiff` method and  `findContours` methods to obtain the difference images as well as the contours from both the images respectively.  </p>
+<p>Difference image is key for us as we draw the boundaries/contours of the parts of both the images to get the sub region in the image which we feed to the YOLO model for object detection. We used python's <b>opencv-python</b> package to find the difference mask as well as the contours in the images. We used the `absdiff` method and  `findContours` method to obtain the difference images as well as the contours from both the images respectively.  </p>
 <p>Here are some difference images that the program produced. These are the images that are produced using DALL-E</p>
 <table>
   <tr height="50%">
     <td><img height=350px width=300px src='https://github.com/user-attachments/assets/07879f06-d635-415a-a66f-1fa87ed3e571'/></td>
     <td><img height=350px width=300px src="https://github.com/user-attachments/assets/cbcc23c9-95e1-473b-a34e-12c7bddc5c4c"/></td>
     <td><img height=350px width=300px src="https://github.com/user-attachments/assets/181e6c91-527c-4130-8cca-a6dcae84d099"/></td>
-
   </tr>
 </table>
+<p> You may ask a question that why does difference image look 'odd' and is not what one expect since this image has clearly defined outlines of the objects in both the images when it should not. This is because, DALL-E tried to give similar images but second image is the scene shift from the first image. This means that all the objects in the first image were shifted towards left or right in the second image. We think this happend because, the prompt that we gave to DALL-E to give two 'similar' images, DALL-E might thought that since these two images are shifted, there are significant changes in both the images yet preserving the alignment of the corresponding objects at their respective position in both the images.</p>
+<!-- ===================================================================Task 3 Begin =================================================================== -->
+<hr></hr>
+<h2>Task 3: Generating the clues by identifying the objects that are in difference image</h2>
+<p>Now our task is to get the sub regions of both the image at given contours. Contours are extracted from the difference image that we generated in above step. For each of the sub region from both the images, we would like to detect if there are any objects in the said space. If yes, we store the results for further clue generation.</p>
+<br/>
+<p>The object detection on sub regions of both the images are run as experiments on both YOLOv8m and YOLOv11n models. We now discuss the experiments first on YOLOv8m model and then followed by YOLOv11n model. For all the experiments we considered only the images that were generated by the DALL-E</p>
+
+<h3>Expectation from the model</h3>
+<p>As the images generated by the DALL-E model are not accurate or atleast what we expected and since it is 'AI' generated, we expect the model to detect those objects which are clearly and easily found just by seeing the image.</p>
+
+<h3>Experiments on YOLOv8m model</h3>
+<hr width='25%vw'></hr>
+<h4>Experiment 1</h4>
+<div>
+  <div>
+    <p><h5>Input image</h5></p>
+    <div align='center'><img width= '50%' src = 'https://github.com/user-attachments/assets/c75c91d9-cc21-42ee-89e7-9df948413b7a'/></div>
+    <p>As we can see the fire hydrant, bicycle, traffic signal and hot-air ballon are clearly and easily distinguishable, we expect the model to atleast detect the same</p>
+  </div>
+  <div>
+    <p><h5>The output</h5></p>
+    <div><img width="1512" alt="yolo8m-cactus" src="https://github.com/user-attachments/assets/457e60dd-4186-4292-91ed-63e581c2be9c"></div>
+    <b>Analysis</b>
+    <p>We see that the clues are generated by the program. If we closely look at the clues, we got three of our major clues that were alredy detected by the model: fire hydrant, bicycle, traffic light. The hot-air balloon got unrecognized and we believe this had happend because the model itself was not trained on detecting the hot-air balloons. Additionally we also got a clue that 'bird from top left' is different in images which is indeed different as in image1 the bird is half visible and in image2 the same bird in visible clearly</p>
+    <br/>
+    <p>There are few mispredictions made by the model in which manier times bird was detected. This might have happend as the blades of the grass near the cactus in the bottom left corner might be percieved as the wing of the bird. The clue about 'car' and 'bench' was purely because of the scene shift issue of the image. </p>
+  </div>
+</div>
+
+
+<h4>Experiment 2</h4>
+<div>
+  <div>
+    <p><h5>Input image</h5></p>
+    <div align='center'><img width='50%' src='https://github.com/user-attachments/assets/40d4a648-def7-4f20-b78c-3f6d0a6bc91e'/></div>
+    <p>Here we are expecting the model to detect the dog, plant pot inplace of dog in image 1 on bottom right and the brown plant plot towards the right. Let's see how the model detects</p>
+  </div>
+  <div>
+    <p><h5>The output</h5></p>
+    <div><img width="1512" alt="yolo8m-dogman" src="https://github.com/user-attachments/assets/643bbea6-b0a3-4cd9-9ae3-039e2b172036"></div>
+</div>
+    <b>Analysis</b>
+    <p>After taking a closer look at the clues, the model detected the dog and brown flower pot at the bottom right and the flower pot on the top left correctly</p>
+    <br/>
+    <p>Additional clues include about the bottle at center. This clue is correct as the green bottle in the center of the grid and on the table is differing terms of height</p>
+  <p>If we closely look at clues, one of the clue is about the 'wine glass' that was holding by the man in the image. It is surprising that the model was able to detect the objects whose outline was not sharp and pixellated. The clues about the dining table, umbrella, person are because of pixel shifts ( outlines detected in the difference mask image)</p>
+  <p>It is some what surprising that the flower vase on the top left is completely missed out by the model</p>
+  </div>
+</div>
+
+<h4>Experiment 3</h4>
+<div>
+  <div>
+    <p><h5>Input image</h5></p>
+    <div align='center'><img width='50%' src='https://github.com/user-attachments/assets/40d4a648-def7-4f20-b78c-3f6d0a6bc91e'/></div>
+    <p>Here we are expecting the model to detect the dog, plant pot inplace of dog in image 1 on bottom right and the brown plant plot towards the right. Let's see how the model detects</p>
+  </div>
+  <div>
+    <p><h5>The output</h5></p>
+    <div><img width="1512" alt="yolo8m-dogman" src="https://github.com/user-attachments/assets/643bbea6-b0a3-4cd9-9ae3-039e2b172036"></div>
+</div>
+    <b>Analysis</b>
+    <p>After taking a closer look at the clues, the model detected the dog and brown flower pot at the bottom right and the flower pot on the top left correctly</p>
+    <br/>
+    <p>Additional clues include about the bottle at center. This clue is correct as the green bottle in the center of the grid and on the table is differing terms of height</p>
+  <p>If we closely look at clues, one of the clue is about the 'wine glass' that was holding by the man in the image. It is surprising that the model was able to detect the objects whose outline was not sharp and pixellated. The clues about the dining table, umbrella, person are because of pixel shifts ( outlines detected in the difference mask image)</p>
+  <p>It is some what surprising that the flower vase on the top left is completely missed out by the model</p>
+  </div>
+</div>
+
+
+
+
 
 
 
