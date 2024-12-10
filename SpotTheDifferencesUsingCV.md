@@ -419,7 +419,7 @@ bottle, chair, dining table, potted plant, sofa, tv/monitor."
 
   <img width='600' src='https://github.com/user-attachments/assets/34acd6ec-c3ad-4afc-865f-7c634512b289'/>
 </div>
-But we are unable to use this images becuase these images are unclear,less sharp images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one objects by other object shadows that can lead to mispredictions and also some are generated with no differences 
+But we are unable to use this images because these images are not clear, less sharpness of images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one object by other object's shadows that can lead to mispredictions and also some are generated with no differences 
 
 
 
