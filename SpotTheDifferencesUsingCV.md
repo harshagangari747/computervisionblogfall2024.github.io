@@ -35,28 +35,28 @@ The image is divided into nine(9) parts to be more detailed while giving clue. <
 
 
 <h3>The Web Application</h3>
-<p>We developed a web application to display the images and 'reveal clues' buttons. We used python Flask api for backend and ReactJs for frontend. The webpage contains two components. One is image and other is button</p>
+<p>We developed a web application to display the images and 'reveal clues' buttons. We used python Flask api for backend and ReactJs for frontend. The webpage contains two components. One is image and other is button.</p>
 <ul>
-  <li>Player sees two similar images. Player needs to identify the areas in both the image where they differ</li>
+  <li>Player sees two similar images. Player needs to identify the areas in both the image where they differ.</li>
   <li>There are two button 'Reveal Next Clue' and 'Reveal All Clues'.</li>
   <ul>
-    <li><b>Reveal Next Clue: </b>Reveals the next clue available on clicking</li>
-    <li><b>Reveal All Clues: </b>Reveals all the clues at once upon clicking</li>
+    <li><b>Reveal Next Clue: </b>Reveals the next clue available on clicking.</li>
+    <li><b>Reveal All Clues: </b>Reveals all the clues at once upon clicking.</li>
   </ul>
 </ul>
 
 <h3>Architecture</h3>
-<p> The following image briefly depicts the architecture of the program</p>
+<p> The following image briefly depicts the architecture of the program: </p>
 <div align="center">
 <img width="50%" align="center" src="https://github.com/user-attachments/assets/c7ba3502-03e8-464b-9bd5-db4cdcc948e7" alt="Architecture Diagram" />
 <br/>
 <p><b>Figure 1: Architecture Diagram</b></p></div>
 
 <h3>Object detection model selection</h3>
-<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many versions of YOLO models. We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models</p>
+<p>We need a object detection model that could help us to identify the objects that are different in both the images. We agreed to use YOLO model. But there are many versions of YOLO models. We thought of trying to run our experiments on YOLOv8 model as it is SOTA in recent releases and also on YOLOv11n model which is a very recent release. We compared the results of both the object detection models.</p>
 
 <h3>Image division</h3>
-We logically divide image to give 'positional clue' about the object for the player to look for. The regions in the image can be comprehended as below mentioned area
+We logically divide image to give 'positional clue' about the object for the player to look for. The regions in the image can be comprehended as below mentioned area.
 <table align='center'>
   <tr align='center'><td>top left</td><td>top</td><td>top right</td></tr>
   <tr align='center'><td>left</td><td>center</td><td>right</td></tr>
@@ -68,7 +68,7 @@ We logically divide image to give 'positional clue' about the object for the pla
 <!-- ===================================================================Task 1 Begin =================================================================== -->
 <h2>Task1: Collecting the Images</h2>
 
-<p>In our first task, we queried many of computer vision models for AI Image Generation that are available out there on internet. We queried tools like DALL-E, Imagen 3 by Google Gemini, Microsoft's Copilot. We realized that since we are using the YOLO model, we thought of keeping the objects that are only detectable by the this model. So for the prompts that we gave, we tried to include a list of objets that we are particularly interest, which were also detectable by YOLO </p>
+<p>In our first task, we queried many of computer vision models for AI Image Generation that are available out there on internet. We queried tools like DALL-E, Imagen 3 by Google Gemini, Microsoft's Copilot. We realized that since we are using the YOLO model, we thought of keeping the objects that are only detectable by the this model. So for the prompts that we gave, we tried to include a list of objets that we are particularly interest, which were also detectable by YOLO. </p>
 
 
 <h3>1. DALL-E: Image Generation tool based on the Prompt given, by OpenAI</h3>
@@ -82,7 +82,7 @@ potted plant, sofa, and TV/monitor."</pre>
   <div align='center'>
     <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/d2b89383-1d70-4d1b-a355-abfa16b22a5e">
   </div>
-  <p><b>Image-1:</b> The above image is generated when the prompt is given to DALL-E the image on right is just left-shift of image on left and that does not have much noticeable difference in them (just a bottle on the table) </p>
+  <p><b>Image-1:</b> The above image is generated when the prompt is given to DALL-E the image on right is just left-shift of image on left and that does not have much noticeable difference in them (just a bottle on the table). </p>
 </div>
 
 
@@ -112,7 +112,7 @@ I need perfectly aligned and specific differences in the images. "</pre>
 </div>
 
 <p>At this point we thought to generate images by giving the real image reference along with the yolo detectable objects to check if we could make DALL-E to generate accurate images</p>
-<p>The below image was used as a reference to give to DALL-E</p>
+<p>The below image was used as a reference to give to DALL-E.</p>
 <div align='center'>
   <img width='600' src='https://github.com/user-attachments/assets/f0c0580b-8bcb-4083-af02-4c81dd29377e'>
 
