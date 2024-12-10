@@ -442,7 +442,7 @@ potted plant, sofa, tv/monitor."
   <img width='600' src='https://github.com/user-attachments/assets/34acd6ec-c3ad-4afc-865f-7c634512b289'/>
 </div>
 <div>
-<p>But we are unable to use this images because these images are not clear, less sharpness of images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one object by other object's shadows that can lead to mispredictions and also some are generated with no differences/</p>
+<p>But we are unable to use this images because these images are not clear, less sharpness of images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one object by other object's shadows that can lead to mispredictions and also some are generated with no differences</p>
 
 
 </div>
@@ -455,6 +455,10 @@ potted plant, sofa, tv/monitor."
 <p><b>3.</b>https://copilot.microsoft.com/ for Copilot</p>
 <p><b>4.</b>https://deepai.org/machine-learning-model/text2img for DeepAI</p>
 <p><b>5.</b>https://www.canva.com/ai-image-generator/ for AI Image Generator by Canvo</p>
+<p><b>6.</b>link for YOLOv8m</p>
+<p><b>7.</b>link https: for YOLO11n</p>
+<p><b>8.</b>https://udell.weebly.com/uploads/1/6/8/6/16860542/spot-the-difference-before-and-after_orig.jpg Real World Image taken from web</p>
+
 </div>
 
 
