@@ -344,7 +344,7 @@ potted plant, sofa, and TV/monitor."</pre>
     <div><img width="1512"  alt="yolo8m-garden" src="https://github.com/user-attachments/assets/8cc002f3-96b7-4c9a-b334-716b9e10b393"></div>
 </div>
     <b>Analysis</b>
-    <p>The model tried to figure out the dog but instead detected it as a teddy bear. We believe that this happend because the outline of the dog was not well defined and is not a real image, and main because the teddy bear has the snout like a dog, tail like a dog and face like a dog, the model was confused between a dog and a teddy bear </p>
+    <p>The model tried to figure out the dog but instead detected it as a teddy bear. We believe that this happened because the outline of the dog was not well defined and is not a real image, and main because the teddy bear has the snout like a dog, tail like a dog and face like a dog, the model was confused between a dog and a teddy bear.</p>
     <br/>
   </div>
 </div>
