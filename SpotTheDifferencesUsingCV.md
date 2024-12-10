@@ -3,10 +3,10 @@
 
 <h3>Introduction</h3>
 <p>Spotting the differences in two similar images is a fun game to solve. But sometimes, this game can become more difficult and tricky to solve as an adult. We got an idea to solve this game using computer vision techniques and advancements that are made in the recent years. This game is all about spotting the objects that are modified in some way or another. For example: change in color, missing object, or misplaced object from one image, etc. This led us to choose an object detection model called  <b>YOLO,</b> which was released in the year 2020.</p>
-<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image and clue generation is made using computer vision models: YOLO and AI Image Generation Tools</p>
+<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image and clue generation is made using computer vision models: YOLO and AI Image Generation Tools.</p>
 
 <h3>Objective</h3>
-<p>Given a pair of two similar images, the objective is to generate clues to guide player to spot the differences in both the images. The clues could be about the objects itself or position of the objects</p>
+<p>Given a pair of two similar images, the objective is to generate clues to guide players to spot the differences in both the images. The clues could be about the objects themselves or the position of the objects.</p>
 
 <h3>Approach</h3>
 <p>Our approach includes three steps.</p>
@@ -14,19 +14,19 @@
 <ol>
   <li><b>Image Generation using AI models.</b>
     <ul>
-    <li>We need to generate a pair of images that have some differences between them.This task is done using Ai-image generators such as Dall-E (by Open AI), Imagen 3(by Google), Copilot (by Microsoft), 	AI Image Generator(also text2img by DeepAI), AI Image Generator (by Canva)</li>
+    <li>We need to generate a pair of images that have some differences between them.This task is done using AI image generators such as Dall-E (by OpenAI), Imagen 3 (by Google), Copilot (by Microsoft), AI Image Generator (also text2img by DeepAI), and AI Image Generator (by Canva).</li>
   </ul>
   </li>
   
   <li><b> Spotting differences in the two images</b>
     <ul>
-    <li>We have subtracted the image from one another we generated the mask image that implies the subtraction of pixel values using OpenCV python package.</li>
+    <li>We have subtracted the image from one another; we generated the mask image that implies the subtraction of pixel values using the OpenCV Python package..</li>
   </ul>
   </li>
   
   <li><b>Generating the clues by identifying the objects that are difference mage.</b>
     <ul><li>
-      After finding the pixel differences we get the contour regions as region of interest (ROI) in the difference mask image and then this region is given to the computer vision model YOLO to detect the object in them and found the relevant position of ROI in the image. 
+      After finding the pixel differences, we get the contour regions as Regions of Interest (ROIs) in the difference mask image, and then this region is given to the computer vision model YOLO to detect the objects in them and found the relevant position of ROI in the image. 
       <li>Thus, we generated the clues from the objects that were detected.
 The image is divided into nine(9) parts to be more detailed while giving clue. </li>
     </li></ul>
