@@ -3,7 +3,7 @@
 
 <h3>Introduction</h3>
 <p>Spotting the differences in two similar images is a fun game to solve. But sometimes, this game can become more difficult and tricky to solve as an adult. We got an idea to solve this game using computer vision techniques and advancements that are made in the recent years. This game is all about spotting the objects that are modified in some way or another. For example: change in color, missing object, or misplaced object from one image, etc. This led us to choose an object detection model called  <b>YOLO,</b> which was released in the year 2020.</p>
-<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image and clue generation is made using computer vision models: YOLO and AI Image Generation Tools.</p>
+<p> We designed a website that gives a user a pair of 'similar' images. The user needs to detect the objects that are different in both the images. If the user can't figure out any differences, we give a set of 'clues' to guide the user to spot the differences. The image generation and clue generation is made using computer vision models such YOLO and other AI Image Generation Tools.</p>
 
 <h3>Objective</h3>
 <p>Given a pair of two similar images, the objective is to generate clues to guide players to spot the differences in both the images. The clues could be about the objects themselves or the position of the objects.</p>
@@ -20,7 +20,7 @@
   
   <li><b> Spotting differences in the two images</b>
     <ul>
-    <li>We have subtracted the image from one another; we generated the mask image that implies the subtraction of pixel values using the OpenCV Python package..</li>
+    <li>We have subtracted the image from one another, then generated the mask image that implies the subtraction of pixel values using the OpenCV Python package..</li>
   </ul>
   </li>
   
@@ -28,17 +28,17 @@
     <ul><li>
       After finding the pixel differences, we get the contour regions as Regions of Interest (ROIs) in the difference mask image, and then this region is given to the computer vision model YOLO to detect the objects in them and found the relevant position of ROI in the image. 
       <li>Thus, we generated the clues from the objects that were detected.
-The image is divided into nine(9) parts to be more detailed while giving clue. </li>
+The image is logically divided into nine(9) parts to give the positional clue so that user can refer to that area to find the difference </li>
     </li></ul>
   </li>
 </ol>
 
 
 <h3>The Web Application</h3>
-<p>We developed a web application to display the images and 'reveal clues' buttons. We used python Flask api for backend and ReactJs for frontend. The webpage contains two components. One is image and other is button.</p>
+<p>We developed a web application to display the images and 'reveal clues' buttons. We used python Flask api for backend and ReactJs for frontend. Our simple webpage contains three components. One is image and other is two buttons.</p>
 <ul>
   <li>Player sees two similar images. Player needs to identify the areas in both the image where they differ.</li>
-  <li>There are two button 'Reveal Next Clue' and 'Reveal All Clues'.</li>
+  <li>There are two buttons 'Reveal Next Clue' and 'Reveal All Clues'.</li>
   <ul>
     <li><b>Reveal Next Clue: </b>Reveals the next clue available on clicking.</li>
     <li><b>Reveal All Clues: </b>Reveals all the clues at once upon clicking.</li>
