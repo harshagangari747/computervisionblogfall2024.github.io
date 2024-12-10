@@ -121,7 +121,10 @@ I need perfectly aligned and specific differences in the images. "</pre>
 <b>Prompt 4 </b>
 <pre>Create an image of a scenery/landscape by taking the reference of above image. 
 Use only objects from this list 0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'.
-Two image should be similar and copy of each other. But make changes to few objects for example, change the position of an object, change color of an object, delete an object, add a new object from the list. When I overlap the images, there should not be any pixel shift of the images. There should exactly align most of the static objects when overlapped.
+Two image should be similar and copy of each other. But make changes to few objects for example, 
+change the position of an object, change color of an object, delete an object, 
+add a new object from the list.When I overlap the images, there should not be 
+any pixel shift of the images.There should exactly align most of the static objects when overlapped.
 </pre>
 <div >
   <p>Resulting image</p>
@@ -148,7 +151,8 @@ sofa, and TV/monitor."
 </div>
 
 <b>Prompt 2</b>
-<pre>"'Continuation of above chat...' -The above image is not used in spotting difference game the image should be of same scene with some differences in them."
+<pre>"'Continuation of above chat...' -The above image is not used in spotting difference game the image 
+should be of same scene with some differences in them."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -159,8 +163,8 @@ sofa, and TV/monitor."
 </div>
 
 <b>Prompt 3</b>
-<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards left/right and 
-having some differences in the pair of images."
+<pre>"Generate a simple image pair which is of same scene not shifting of the scene towards 
+left/right and having some differences in the pair of images."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
@@ -214,7 +218,8 @@ potted plant, sofa, tv/monitor."
 </div>
 
 <b>Prompt 2</b>
-<pre>"The same prompt as before is used but the tool have an option to generated image giving priority for quality of image instead of speed where the first is generated on speed."
+<pre>"The same prompt as before is used but the tool have an option to generated image giving priority for quality of image 
+instead of speed where the first is generated on speed."
 </pre>
 <div >
   <p><p>Resulting image</p></p>
