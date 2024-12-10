@@ -419,7 +419,7 @@ bottle, chair, dining table, potted plant, sofa, tv/monitor."
 
   <img width='600' src='https://github.com/user-attachments/assets/34acd6ec-c3ad-4afc-865f-7c634512b289'/>
 </div>
-
+But we are unable to use this images becuase these images are little brighter or any other fliter is applied with respective to its clone image can lead to mispredictions
 
 
 
