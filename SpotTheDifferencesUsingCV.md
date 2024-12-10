@@ -443,8 +443,16 @@ potted plant, sofa, tv/monitor."
 </div>
 But we are unable to use this images because these images are not clear, less sharpness of images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one object by other object's shadows that can lead to mispredictions and also some are generated with no differences 
 
-<div><b>Reference :</b>
-<p><b>1.</b>src="https://chatgpt.com/" for DALL-E</p></div>
+<div>
+  
+<b>Reference :</b>
+
+<p><b>1.</b>https://chatgpt.com/ for DALL-E</p>
+<p><b>2.</b>https://gemini.google.com/app for Imagen 3</p>
+<p><b>3.</b>https://copilot.microsoft.com/ for Copilot</p>
+<p><b>4.</b>https://deepai.org/machine-learning-model/text2img for DeepAI</p>
+<p><b>5.</b>https://www.canva.com/ai-image-generator/ for AI Image Generator by Canvo</p>
+</div>
 
 
 
