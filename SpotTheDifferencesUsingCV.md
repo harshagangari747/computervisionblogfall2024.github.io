@@ -406,7 +406,7 @@ potted plant, sofa, and TV/monitor."</pre>
 </div>
 </div>
     <b>Analysis</b>
-    <p>This time, this model completely mispredicted the objects. Only one correct clue could be generated which a potted plant on the top right corner. The model completely missed the dog in both the images. We are unclear why model missed the dog this time</p>
+    <p>This time, this model completely mispredicted the objects. Only one correct clue could be generated, which is a potted plant in the top right corner. The model completely missed the dog in both the images. We are unclear why the model missed the dog this time.</p>
     <br/>
   </div>
 </div>
