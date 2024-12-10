@@ -443,7 +443,8 @@ potted plant, sofa, tv/monitor."
 </div>
 But we are unable to use this images because these images are not clear, less sharpness of images,little brighter or any other fliter is applied with respective to its clone image, some images that are generated have difference in angle of light which effects visibility of one object by other object's shadows that can lead to mispredictions and also some are generated with no differences 
 
-
+<div><b>Reference :</b>
+<p><b>1.</b>src="https://chatgpt.com/" for DALL-E</p></div>
 
 
 
